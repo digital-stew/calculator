@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 22%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.calc {
+  width: 500px;
+  padding: 1rem;
+  position: relative;
+  background-color: whitesmoke;
+  border-radius: 16px;
+  -webkit-box-shadow: 2px 5px 16px 0px #0b325e,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 2px 5px 16px 0px #0b325e, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+.calc__display {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  grid-template-rows: 30px 1fr;
+  overflow: hidden;
+}
+.screen-1 {
+  height: 100px;
+  font-size: 3em;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+.screen-2 {
+  padding-left: 1rem;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+}
+.operator {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 1rem;
+  grid-row: span 2;
+}
+.calc__buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 400px;
+  gap: 5px;
+}
+button {
+  font-size: 1.3em;
+  transition: all 300ms;
+  border-radius: 10px;
+}
+button:hover {
+  box-shadow: 5px 5px 14px 1px rgba(0, 0, 0, 0.4);
+  scale: 1.005;
+  cursor: pointer;
+}
+.cancel {
+  grid-column: span 2;
+}
+.equals {
+  grid-column: span 2;
+}
