@@ -10,8 +10,12 @@ buttons.forEach((button) => {
 })
 
 function calculate() {
+
+    if (screen1.innerText === '') return
+
     const numberA = parseFloat(screen1.innerText)
     const numberB = parseFloat(screen2.innerText)
+
     const selectedOperator = operator.innerText
     switch (selectedOperator) {
         case '+':

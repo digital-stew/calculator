@@ -16,7 +16,7 @@ body {
   );
 }
 .calc {
-  width: 500px;
+  width: 600px;
   padding: 1rem;
   position: relative;
   background-color: whitesmoke;
@@ -72,4 +72,9 @@ button:hover {
 }
 .equals {
   grid-column: span 2;
+}
+@media screen and (max-width: 600px) {
+  .calc {
+    width: 100vw;
+  }
 }
